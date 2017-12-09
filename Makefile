@@ -37,11 +37,11 @@ ELCHECKS := $(wildcard tests/*-tests.el)
 
 AUTOLOADS = haskell-mode-autoloads.el
 
-PKG_DIST_FILES = $(ELFILES) logo.svg NEWS haskell-mode.info dir
+PKG_DIST_FILES = $(ELFILES) logo.svg NEWS
 
 .PHONY: all compile info clean check check-emacs-version
 
-all: check-emacs-version compile $(AUTOLOADS) info
+all: check-emacs-version compile $(AUTOLOADS)
 
 check-emacs-version :
 	$(BATCH) --eval "(when (version< emacs-version \"24.3\")				\
